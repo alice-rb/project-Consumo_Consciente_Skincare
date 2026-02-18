@@ -16,20 +16,6 @@ H3.  La preferencia de posicionamiento de marca se asocia con el perfil actitudi
 ## Metodologia
 El análisis se basa en datos procedentes de una encuesta online y combina técnicas de ETL, análisis exploratorio (EDA), reducción de dimensionalidad (PCA) y segmentación (clustering).
 
-## Estructura
-├── src/
-|   |── data/
-│       ├── raw/                # Datos originales de la encuesta (CSV)
-│       ├── clean/              # Datos transformados y listos para análisis
-│   ├── utils.py                        # Funciones auxiliares (guardado, rangos, perfiles)
-│   ├── skincare-ETL.ipynb              # Limpieza, transformación y creación de variables
-│   ├── skincare-PCA_cluster.ipynb      # PCA, clustering y análisis de perfiles
-|   |── skincare-graficos.ipynb         # Creación de gráficos y visualizaciones
-|   
-├── figures/                    # Gráficos generados durante el análisis
-│
-└── README.md
-
 ## Proceso de ETL
 El archivo skincare-ETL.ipynb contiene todo el proceso de preparación de los datos. Este paso es clave para convertir las respuestas de la encuesta en variables analizables.
 
@@ -132,5 +118,6 @@ El proyecto distingue de forma explícita entre variables de decisión (cómo se
 Esta separación permite mostrar que existen perfiles claros de decisión de compra, y que estas diferencias actitudinales no se traducen necesariamente en diferencias significativas en la intensidad de consumo.
 Sin embargo, sí se observa una asociación entre los perfiles de decisión y el posicionamiento de marca preferido. Cada perfil muestra patrones distintos de preferencia, lo que indica que la estructura de decisión influye en qué tipo de marca se elige, aunque no determine cuánto se consume.
 En conjunto, los resultados sugieren que el consumo en skincare se mantiene relativamente estable entre perfiles, mientras que las actitudes influyen principalmente en la forma en que se decide y en el posicionamiento de marca elegido.
+
 
 '''
