@@ -15,20 +15,6 @@ H3.  La preferencia de posicionamiento de marca se asocia con el perfil actitudi
 ## Metodologia
 El análisis se basa en datos procedentes de una encuesta online y combina técnicas de ETL, análisis exploratorio (EDA), reducción de dimensionalidad (PCA) y segmentación (clustering).
 
-## Estructura
-├── src/
-|   |── data/
-│       ├── raw/                # Datos originales de la encuesta (CSV)
-│       ├── clean/              # Datos transformados y listos para análisis
-│   ├── utils.py                        # Funciones auxiliares (guardado, rangos, perfiles)
-│   ├── skincare-ETL.ipynb              # Limpieza, transformación y creación de variables
-│   ├── skincare-PCA_cluster.ipynb      # PCA, clustering y análisis de perfiles
-|   |── skincare-graficos.ipynb         # Creación de gráficos y visualizaciones
-|   
-├── figures/                    # Gráficos generados durante el análisis
-│
-└── README.md
-
 ## Proceso de ETL
 El archivo skincare-ETL.ipynb contiene todo el proceso de preparación de los datos. Este paso es clave para convertir las respuestas de la encuesta en variables analizables.
 
