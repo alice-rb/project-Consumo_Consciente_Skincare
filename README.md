@@ -18,27 +18,27 @@ El análisis se basa en datos procedentes de una encuesta online y combina técn
 ## Proceso de ETL
 El archivo skincare-ETL.ipynb contiene todo el proceso de preparación de los datos. Este paso es clave para convertir las respuestas de la encuesta en variables analizables.
 
-  1️. Extracción de datos
+1️. Extracción de datos
         Los datos provienen de una encuesta creada con Google Forms
         Se cargan desde un archivo CSV 
         Se renombran las columnas para facilitar su uso en Python
 
-  2. Limpieza de datos
+2. Limpieza de datos
         Tratamiento de valores nulos (especialmente en variables condicionales)
         Mapeado de respuestas categóricas
         Eliminación de columnas no relevantes para el análisis
 
-  3. Creación de variables derivadas
-        Para poder analizar el comportamiento de consumo y la toma de decisiones, se crean nuevas variables a partir de las respuestas originales.
+3. Creación de variables derivadas
+   Para poder analizar el comportamiento de consumo y la toma de decisiones, se crean nuevas variables a partir de las respuestas originales.
 
-        🔹 Variables de consumo (conductual) - Cuánto y cómo se consume
+   🔹 Variables de consumo (conductual) - Cuánto y cómo se consume
             - gasto_por_compra: conversión de rango categórico a punto medio numérico
             - compras_por_mes: transformación de la frecuencia de compra a escala mensual
             - gasto_mensual_avg: gasto mensual estimado [gasto_por_compra * compra_por_mes]
             - freq_score: frecuencia de compra en escala ordinal
             - cant_productos_uso: número de productos usados a diario
 
-        🔹 Variables de decisión de compra (actitudinal) - Cómo decide el consumidor. Al ser la base del PCA, se han convertido a valores ordinales en la ETL
+   🔹 Variables de decisión de compra (actitudinal) - Cómo decide el consumidor. Al ser la base del PCA, se han convertido a valores ordinales en la ETL
             - inci_score: lectura del INCI (Nunca / A veces / Siempre)
             - medios_score: uso de medios para informarse
             - calificacion_informado: autopercepción de conocimiento (1–5)
@@ -47,7 +47,7 @@ El archivo skincare-ETL.ipynb contiene todo el proceso de preparación de los da
             - eco_score: percepción de claims eco/natural
             - influ_score: compra influenciada por influencers (0/1)
 
-        🔹 Variables sociodemográficas (contextual) 
+   🔹 Variables sociodemográficas (contextual) 
             - Edad --> transformada a rango_edad
             - Sexo
             - estudios
@@ -55,7 +55,7 @@ El archivo skincare-ETL.ipynb contiene todo el proceso de preparación de los da
             - lugar_compra 
             - perfil (tipo de marca preferida: dermo, lujo, natural, trendy)
 
-        4. Guardado de datos
+4. Guardado de datos
             Los dataframes limpios se guardan en formato pickle para facilitar su reutilización.
 
 ## DataFrames principales
